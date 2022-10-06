@@ -17,6 +17,8 @@ function login() {
     email: email,
   });
 
+  //TODO: event reaching GTM but not GA4 ¿?
+
   displayToast("Login");
 }
 
