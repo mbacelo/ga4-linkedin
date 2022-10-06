@@ -10,9 +10,12 @@ function playSong(title, artist, genre) {
 
 function login() {
   var email = $("#email").val();
-  mixpanel.identify(email); //Identify a user with a unique ID to track user activity across devices, tie a user to their events, and create a user profile. If you never call this method, unique visitors are tracked using a UUID that generates the first time they visit the site.
+  //mixpanel.identify(email); //Identify a user with a unique ID to track user activity across devices, tie a user to their events, and create a user profile. If you never call this method, unique visitors are tracked using a UUID that generates the first time they visit the site.
 
-  mixpanel.track("Login");
+  dataLayer.push({
+    event: "Login",
+    email: email,
+  });
 
   displayToast("Login");
 }
