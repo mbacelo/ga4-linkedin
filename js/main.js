@@ -68,9 +68,8 @@ function displayToast(toastMessage) {
 }
 
 function viewPageEvent(pageName) {
-  mixpanel.track(pageName);
-
-  displayToast(pageName);
+  //mixpanel.track(pageName);
+  //displayToast(pageName);
 }
 
 function trackLinks(linkSelector) {
